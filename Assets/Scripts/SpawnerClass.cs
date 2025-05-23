@@ -6,16 +6,16 @@ public class SpawnerClass : MonoBehaviour
     public float minSpawnTime = 1f;
     public float maxSpawnTime = 3f;
 
-    private GameObject enemyPrefab;
+    public GameObject enemyPrefab;
 
     void Start()
     {
         // โหลด prefab ศัตรู
-        enemyPrefab = Resources.Load<GameObject>("Prefabs/Enemy");
+        //enemyPrefab = Resources.Load<GameObject>("Prefabs/Enemy");
 
         if (enemyPrefab == null)
         {
-            Debug.LogError("ไม่พบ Prefab: Resources/Prefabs/Enemy");
+            Debug.LogError("ไม่พบ Prefab");
             return;
         }
 

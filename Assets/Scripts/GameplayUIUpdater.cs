@@ -19,11 +19,11 @@ public class GameplayUIUpdater : MonoBehaviour
         if (mainLogic == null) return;
 
         int hp = Mathf.Max(mainLogic.GetHP(), 0);
-        hpText.text = $"HP: {hp}";
+        hpText.text = $"HP\n{hp}";
 
         float time = Mathf.Max(mainLogic.GetTimeRemaining(), 0);
-        timerText.text = $"Time: {time:F1}s";
+        timerText.text = $"Time\n{time:F1}s";
 
-        scoreText.text = $"Score: {mainLogic.GetScore()}";
+        scoreText.text = $"Score\n{mainLogic.GetScore()}";
     }
 }
