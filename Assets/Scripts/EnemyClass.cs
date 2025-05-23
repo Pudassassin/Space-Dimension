@@ -46,6 +46,11 @@ public class EnemyClass : MonoBehaviour
             isHit = true;
             StartCoroutine(FlashRedAndDestroy());
         }
+
+        if (!isHit && other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator FlashRedAndDestroy()
